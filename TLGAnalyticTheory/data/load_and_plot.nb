@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     32458,        844]
-NotebookOptionsPosition[     31024,        791]
-NotebookOutlinePosition[     31366,        806]
-CellTagsIndexPosition[     31323,        803]
+NotebookDataLength[     31918,        839]
+NotebookOptionsPosition[     30486,        786]
+NotebookOutlinePosition[     30828,        801]
+CellTagsIndexPosition[     30785,        798]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -175,7 +175,7 @@ Cell[BoxData[
        RowBox[{
         RowBox[{"Style", "[", 
          RowBox[{
-         "\"\<\!\(\*SubscriptBox[\(V\), \(1  in\)]\)\>\"", ",", "Italic", ",",
+         "\"\<\!\(\*SubscriptBox[\(V\), \(1, in\)]\)\>\"", ",", "Italic", ",",
            "Large", ",", 
           RowBox[{"FontFamily", "\[Rule]", "\"\<Times New Roman\>\""}]}], 
          "]"}], ",", 
@@ -186,7 +186,7 @@ Cell[BoxData[
        RowBox[{
         RowBox[{"Style", "[", 
          RowBox[{
-         "\"\<\!\(\*SubscriptBox[\(V\), \(2  in\)]\)\>\"", ",", "Italic", ",",
+         "\"\<\!\(\*SubscriptBox[\(V\), \(2, in\)]\)\>\"", ",", "Italic", ",",
            "Large", ",", 
           RowBox[{"FontFamily", "\[Rule]", "\"\<Times New Roman\>\""}]}], 
          "]"}], ",", 
@@ -197,7 +197,7 @@ Cell[BoxData[
        RowBox[{
         RowBox[{"Style", "[", 
          RowBox[{
-         "\"\<\!\(\*SubscriptBox[\(V\), \(3  in\)]\)\>\"", ",", "Italic", ",",
+         "\"\<\!\(\*SubscriptBox[\(V\), \(3, in\)]\)\>\"", ",", "Italic", ",",
            "Large", ",", 
           RowBox[{"FontFamily", "\[Rule]", "\"\<Times New Roman\>\""}]}], 
          "]"}], ",", 
@@ -208,7 +208,7 @@ Cell[BoxData[
        RowBox[{
         RowBox[{"Style", "[", 
          RowBox[{
-         "\"\<\!\(\*SubscriptBox[\(V\), \(1  out\)]\)\>\"", ",", "Italic", 
+         "\"\<\!\(\*SubscriptBox[\(V\), \(1, out\)]\)\>\"", ",", "Italic", 
           ",", "Large", ",", 
           RowBox[{"FontFamily", "\[Rule]", "\"\<Times New Roman\>\""}]}], 
          "]"}], ",", 
@@ -219,7 +219,7 @@ Cell[BoxData[
        RowBox[{
         RowBox[{"Style", "[", 
          RowBox[{
-         "\"\<\!\(\*SubscriptBox[\(V\), \(2  out\)]\)\>\"", ",", "Italic", 
+         "\"\<\!\(\*SubscriptBox[\(V\), \(2, out\)]\)\>\"", ",", "Italic", 
           ",", "Large", ",", 
           RowBox[{"FontFamily", "\[Rule]", "\"\<Times New Roman\>\""}]}], 
          "]"}], ",", 
@@ -230,26 +230,21 @@ Cell[BoxData[
        RowBox[{
         RowBox[{"Style", "[", 
          RowBox[{
-         "\"\<\!\(\*SubscriptBox[\(V\), \(3  out\)]\)\>\"", ",", "Italic", 
+         "\"\<\!\(\*SubscriptBox[\(V\), \(3, out\)]\)\>\"", ",", "Italic", 
           ",", "Large", ",", 
           RowBox[{"FontFamily", "\[Rule]", "\"\<Times New Roman\>\""}]}], 
          "]"}], ",", 
         RowBox[{"{", 
          RowBox[{"1.2", ",", "1.6"}], "}"}]}], "]"}]}], "}"}], "]"}]}], 
   "\[IndentingNewLine]", "]"}]], "Input",
- CellChangeTimes->{{3.682461939528327*^9, 3.682461961818284*^9}, {
-  3.682462013139638*^9, 3.682462016052682*^9}, {3.682462047475046*^9, 
-  3.682462210304818*^9}, {3.682462267989233*^9, 3.6824623899336147`*^9}, {
-  3.6824624367283115`*^9, 3.6824624555487146`*^9}, {3.6824625712831726`*^9, 
-  3.682462647280737*^9}, {3.682462682794013*^9, 3.682462686358575*^9}, {
-  3.682462744852211*^9, 3.682462813469795*^9}, {3.6824631023312936`*^9, 
-  3.6824631095534363`*^9}, {3.682463234431301*^9, 3.682463326142993*^9}, {
-  3.6824633622475147`*^9, 3.68246339690417*^9}, {3.682463441753256*^9, 
-  3.6824635268079977`*^9}, {3.682463583074825*^9, 3.682463588259516*^9}, {
-  3.6824636486325445`*^9, 3.6824638993919907`*^9}, {3.6824641213634152`*^9, 
-  3.6824642832516775`*^9}, {3.6824643301777573`*^9, 3.6824643328376513`*^9}, {
-  3.682545520619442*^9, 3.6825455208185835`*^9}, {3.683158826548053*^9, 
-  3.6831588503760705`*^9}}]
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGAQBmIQzfeiQG5v/mvHJH0rRRD9qnyJOoietJ5RA0RPMX6v
+DaKFDno6gOgzy+vdQbTOg71hIDrEb3oMWL7/YxyIPsCfmQtW9/tFGYjuy4is
+BtFFlafBdICrdDOInsCxvhtEf515aj1Y39aNG0C0xVnfAyA6bfKR0yB6yWv3
+CyD627s5V0D0GimLWyBa7vbNJyD6e8qj1yD6i2/HGxB9zlbkC4g26M4R3gek
+JRdq64PofbwZziDaYIOrJ4jmOjcLTFdcEn73FEhfM5QC08s6A1MFC187HuXw
+yQDRPZ9n3ZIB0uUl02+DaAAMvKZq
+  "]]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -810,41 +805,41 @@ Cell[1202, 39, 682, 18, 72, "Input"],
 Cell[1887, 59, 660, 17, 72, "Input"],
 Cell[CellGroupData[{
 Cell[2572, 80, 229, 5, 67, "Subchapter"],
-Cell[2804, 87, 6637, 164, 532, "Input"]
+Cell[2804, 87, 6099, 159, 532, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[9478, 256, 171, 2, 67, "Subchapter"],
-Cell[9652, 260, 376, 11, 31, "Input"],
+Cell[8940, 251, 171, 2, 67, "Subchapter"],
+Cell[9114, 255, 376, 11, 31, "Input"],
 Cell[CellGroupData[{
-Cell[10053, 275, 184, 2, 70, "Section"],
-Cell[10240, 279, 5578, 124, 532, "Input"],
+Cell[9515, 270, 184, 2, 70, "Section"],
+Cell[9702, 274, 5578, 124, 532, "Input"],
 Cell[CellGroupData[{
-Cell[15843, 407, 146, 2, 49, "Subsection"],
-Cell[15992, 411, 3848, 97, 452, "Input"]
+Cell[15305, 402, 146, 2, 49, "Subsection"],
+Cell[15454, 406, 3848, 97, 452, "Input"]
 }, Closed]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[19889, 514, 147, 1, 70, "Section"],
+Cell[19351, 509, 147, 1, 70, "Section"],
 Cell[CellGroupData[{
-Cell[20061, 519, 729, 17, 31, "Input"],
-Cell[20793, 538, 416, 8, 31, "Output"]
+Cell[19523, 514, 729, 17, 31, "Input"],
+Cell[20255, 533, 416, 8, 31, "Output"]
 }, Open  ]],
-Cell[21224, 549, 5970, 138, 592, "Input"],
-Cell[27197, 689, 657, 12, 31, "Input"],
+Cell[20686, 544, 5970, 138, 592, "Input"],
+Cell[26659, 684, 657, 12, 31, "Input"],
 Cell[CellGroupData[{
-Cell[27879, 705, 168, 3, 31, "Input"],
-Cell[28050, 710, 182, 2, 31, "Output"]
+Cell[27341, 700, 168, 3, 31, "Input"],
+Cell[27512, 705, 182, 2, 31, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[28269, 717, 165, 3, 31, "Input"],
-Cell[28437, 722, 160, 2, 31, "Output"]
+Cell[27731, 712, 165, 3, 31, "Input"],
+Cell[27899, 717, 160, 2, 31, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[28658, 731, 231, 5, 67, "Subchapter"],
-Cell[28892, 738, 805, 19, 31, "Input"],
-Cell[29700, 759, 1308, 29, 212, "Input"]
+Cell[28120, 726, 231, 5, 67, "Subchapter"],
+Cell[28354, 733, 805, 19, 31, "Input"],
+Cell[29162, 754, 1308, 29, 212, "Input"]
 }, Open  ]]
 }
 ]
