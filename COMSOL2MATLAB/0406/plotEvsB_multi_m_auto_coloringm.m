@@ -3,8 +3,8 @@
 %% set default value for isPlotLL, mmin, mmax and orderOfEv
 orderOfEv = 1;
 mmin = -200;
-mminToPlot = -80;
-mmax = -80;
+mminToPlot = -40;
+mmax = -40;
 mstep = 20;
 % m_0 = (len_m+1)/2;
 % m_0 = 3;
@@ -25,6 +25,7 @@ solName = ['AllSolVals_' midSolName '_eV'];
 
 %% plot E vs B
 figure;
+hold all
 head = 'h = plot(';
 cmd = ['B,' solName '(1,:,' num2str((mminToPlot - mmin)/mstep + 1) '),''b'' '];
 for mi = mminToPlot:mstep:mmax
