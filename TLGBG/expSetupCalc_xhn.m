@@ -1,0 +1,85 @@
+%% set boundary condition
+paras;
+Vt = 5;
+Vb = -14;
+dist = 100e-9;
+disb = 300e-9;
+plotSurf = false;
+
+%% calculate nt, nb and solve for n1, n2, n3
+% while calculating nt & nb, there might be a factor 2
+nt = epsilon0*kappa*Vt/e/dist;
+nb = epsilon0*kappa*Vb/e/disb;
+fun = @(n13) functosolveallnnorm(n13(1),n13(2),nt,nb,T1,T2,T3,Ef,E1,E3);
+[n13out, fval] = fminsearch(fun, [-nt,-nb])
+
+n1 = n13out(1); n3 = n13out(2); n2 = -(nt+nb)-n1-n3;
+
+% interlayer potential difference
+Delta12 = alpha*(n2 + n3 + nb );
+Delta23 = alpha*(n3 + nb);
+
+%% calculate k-space band structure
+kxmin = -0.5/a0;
+kxstep = 0.01/a0;
+kxmax = 0.5/a0;
+kymid = 4*pi/3/a0;
+kymin = kymid - 0.5/a0;
+kystep = 0.01/a0;
+kymax = kymid + 0.5/a0;
+
+kx = kxmin:kxstep:kxmax;
+ky = kymin:kystep:kymax;
+lenkx = length(kx);
+lenky = length(ky);
+
+bands = zeros(lenkx,lenky,6);
+evalsatgamma = eig(getHamiltonian(0, kymid, Delta12, Delta23));
+Delta0 = evalsatgamma(4) - evalsatgamma(3)
+
+for i = 1:lenkx
+    for j = 1:lenky
+        evals = eig(getHamiltonian(kx(i), ky(j), Delta12, Delta23));
+        for bandNum = 1:6
+            bands(j, i, bandNum) = evals(bandNum);
+        end
+    end
+end
+
+if plotSurf
+figure;
+hold on
+for i=1:6
+meshc(kx,ky,bands(:,:,i))
+end
+hold off
+title(['Vt=' num2str(Vt) ', Vb=' num2str(Vb)]);
+end
+
+figure;
+hold on
+for i=1:6
+plot(kx*a0,bands(floor(lenky/2)+1,:,i))
+end
+hold off
+xlabel('kx(1/a0)');ylabel('E(eV)');title(['Vt=' num2str(Vt) ', Vb=' num2str(Vb)]);
+
+kxfine = -0.1/a0:0.001/a0:0.1/a0;
+bandsfine = zeros(length(kxfine),6);
+for i = 1:length(kxfine)
+    evals = eig(getHamiltonian(kxfine(i), kymid, Delta12, Delta23));
+    for bandNum = 1:6
+        bandsfine(i,bandNum) = evals(bandNum);
+    end
+end
+figure;
+hold on
+for i=1:6
+plot(kxfine*a0,bandsfine(:,i))
+end
+hold off
+xlabel('kx(1/a0)');ylabel('E(eV)');
+title(['Vt=' num2str(Vt) ', Vb=' num2str(Vb)]);
+
+Delta = min(min(bands(:,:,4))) - max(max(bands(:,:,3)))
+Efexp = ntoEk( n1+n2+n3,-Delta12,Delta23,T1,T2,T3,Ef,E1,E3 )
