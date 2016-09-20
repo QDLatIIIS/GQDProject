@@ -2,7 +2,7 @@
 
 %% parameters
 dirname = 'C:\Users\jwt\Documents\GitHub\GQDProject\TLGAnalyticTheory\data\MMAdata\';
-SolName = 'ListSol0629TLGExpPotLM';
+SolName = 'ListSol0919TLGExpPotLM';
 mVals = -200:20:0;
 lenB = 400;
 lenM = length(mVals);
