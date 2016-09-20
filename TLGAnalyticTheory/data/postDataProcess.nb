@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     10067,        308]
-NotebookOptionsPosition[      9414,        282]
-NotebookOutlinePosition[      9753,        297]
-CellTagsIndexPosition[      9710,        294]
+NotebookDataLength[     11091,        340]
+NotebookOptionsPosition[     10288,        309]
+NotebookOutlinePosition[     10627,        324]
+CellTagsIndexPosition[     10584,        321]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -241,6 +241,19 @@ Cell[BoxData[
   ";"}]], "Input",
  CellChangeTimes->{{3.683332045183305*^9, 3.683332101873433*^9}}],
 
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SCDAllBFromFitFB", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"fittedSCD", "/.", 
+      RowBox[{"{", 
+       RowBox[{"x", "\[Rule]", "BB"}], "}"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"BB", ",", "0.005", ",", "4", ",", "0.005"}], "}"}]}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.6833575730502815`*^9, 3.6833575782222233`*^9}}],
+
 Cell[CellGroupData[{
 
 Cell[BoxData[
@@ -265,6 +278,20 @@ Cell[BoxData[
 Cell[BoxData["\<\"SCDAllBFromFit.dat\"\>"], "Output",
  CellChangeTimes->{3.6833321423476925`*^9, 3.6833325154111366`*^9, 
   3.683332719695737*^9, 3.6833327674136515`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", 
+  RowBox[{"\"\<SCDAllBFromFitFB.dat\>\"", ",", "SCDAllBFromFitFB"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.6833321286190643`*^9, 3.6833321416492043`*^9}, {
+  3.683357586519232*^9, 3.683357589612996*^9}}],
+
+Cell[BoxData["\<\"SCDAllBFromFitFB.dat\"\>"], "Output",
+ CellChangeTimes->{3.6833321423476925`*^9, 3.6833325154111366`*^9, 
+  3.683332719695737*^9, 3.6833327674136515`*^9, 3.68335759226925*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -300,16 +327,21 @@ Cell[558, 20, 5529, 160, 292, "Input"],
 Cell[6090, 182, 1097, 27, 132, "Input"],
 Cell[7190, 211, 655, 17, 31, "Input"],
 Cell[7848, 230, 384, 11, 31, "Input"],
+Cell[8235, 243, 392, 11, 31, "Input"],
 Cell[CellGroupData[{
-Cell[8257, 245, 142, 2, 31, "Input"],
-Cell[8402, 249, 168, 4, 31, "Output"]
+Cell[8652, 258, 142, 2, 31, "Input"],
+Cell[8797, 262, 168, 4, 31, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[8607, 258, 193, 4, 31, "Input"],
-Cell[8803, 264, 170, 2, 31, "Output"]
+Cell[9002, 271, 193, 4, 31, "Input"],
+Cell[9198, 277, 170, 2, 31, "Output"]
 }, Open  ]],
-Cell[8988, 269, 213, 5, 31, "Input"],
-Cell[9204, 276, 206, 4, 31, "Input"]
+Cell[CellGroupData[{
+Cell[9405, 284, 246, 5, 31, "Input"],
+Cell[9654, 291, 193, 2, 31, "Output"]
+}, Open  ]],
+Cell[9862, 296, 213, 5, 31, "Input"],
+Cell[10078, 303, 206, 4, 31, "Input"]
 }
 ]
 *)

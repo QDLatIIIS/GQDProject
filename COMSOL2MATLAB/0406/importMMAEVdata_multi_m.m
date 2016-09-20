@@ -2,9 +2,10 @@
 
 %% parameters
 dirname = 'C:\Users\jwt\Documents\GitHub\GQDProject\TLGAnalyticTheory\data\MMAdata\';
-SolName = 'ListSol0919TLGExpPotLM';
+% SolName = 'ListSol0919TLGExpPotLM';
+SolName = 'ListSol0920TLGExpPotLMFB';
 mVals = -200:20:0;
-lenB = 400;
+lenB = 800;
 lenM = length(mVals);
 %% initialization
 AllEVs = NaN(10000,lenM);

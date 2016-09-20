@@ -19,8 +19,10 @@ if nargin<=2
     startRow = 1;
     endRow = inf;
     if nargin <= 1
+%         filename =...
+%             'C:\Users\jwt\Documents\GitHub\GQDProject\TLGAnalyticTheory\data\MMAdata\SCDAllBFromFit.dat';
         filename =...
-            'C:\Users\jwt\Documents\GitHub\GQDProject\TLGAnalyticTheory\data\MMAdata\SCDAllBFromFit.dat';
+            'C:\Users\jwt\Documents\GitHub\GQDProject\TLGAnalyticTheory\data\MMAdata\SCDAllBFromFitFB.dat';
     end
 end
 
