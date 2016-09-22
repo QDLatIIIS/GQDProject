@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     59988,       1521]
-NotebookOptionsPosition[     57821,       1448]
-NotebookOutlinePosition[     58163,       1463]
-CellTagsIndexPosition[     58120,       1460]
+NotebookDataLength[     76140,       1926]
+NotebookOptionsPosition[     73638,       1843]
+NotebookOutlinePosition[     73980,       1858]
+CellTagsIndexPosition[     73937,       1855]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -331,6 +331,117 @@ Cell["positive tau, comparing m = -1, 0, 1, theory pot", "Section",
  CellChangeTimes->{{3.6825492742736454`*^9, 3.682549288136521*^9}, {
   3.682549332066684*^9, 3.682549341040097*^9}}],
 
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"EvsAddUTheoryIn", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"BB", ",", 
+       RowBox[{
+        RowBox[{"Sort", "[", 
+         RowBox[{"Eigenvalues", "[", 
+          RowBox[{"ham", "/.", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"n", "\[Rule]", "nn"}], ",", 
+             RowBox[{"B", "\[Rule]", "BB"}], ",", 
+             RowBox[{"U1", "\[Rule]", "0.025"}], ",", 
+             RowBox[{"U2", "\[Rule]", "0."}], ",", 
+             RowBox[{"U3", "\[Rule]", 
+              RowBox[{"-", "0.025"}]}]}], "}"}]}], "]"}], "]"}], "[", 
+        RowBox[{"[", "eorder", "]"}], "]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"nn", ",", "0", ",", "6", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"BB", ",", "0", ",", "4", ",", "0.02"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"eorder", ",", "1", ",", "6", ",", "1"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"EvsAddUTheoryInMT", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"BB", ",", 
+       RowBox[{
+        RowBox[{"Sort", "[", 
+         RowBox[{"Eigenvalues", "[", 
+          RowBox[{"ham", "/.", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"n", "\[Rule]", "nn"}], ",", 
+             RowBox[{"B", "\[Rule]", "BB"}], ",", 
+             RowBox[{"U1", "\[Rule]", 
+              RowBox[{"-", "0.025"}]}], ",", 
+             RowBox[{"U2", "\[Rule]", "0"}], ",", 
+             RowBox[{"U3", "\[Rule]", "0.025"}]}], "}"}]}], "]"}], "]"}], "[", 
+        RowBox[{"[", "eorder", "]"}], "]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"nn", ",", "0", ",", "6", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"BB", ",", "0", ",", "4", ",", "0.02"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"eorder", ",", "1", ",", "6", ",", "1"}], "}"}]}], "]"}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.683547759359043*^9, 3.6835478137161865`*^9}, {
+  3.6835479301976795`*^9, 3.6835479810857444`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"styles", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Directive", "[", 
+      RowBox[{"Black", ",", 
+       RowBox[{"Thickness", "[", "0.007", "]"}]}], "]"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Directive", "[", 
+      RowBox[{
+       RowBox[{"Darker", "[", "Red", "]"}], ",", "Dotted", ",", 
+       RowBox[{"Thickness", "[", "0.007", "]"}]}], "]"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Directive", "[", 
+      RowBox[{
+       RowBox[{"Darker", "[", "Green", "]"}], ",", "Dashed", ",", 
+       RowBox[{"Thickness", "[", "0.007", "]"}]}], "]"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Directive", "[", 
+      RowBox[{
+       RowBox[{"Darker", "[", "Blue", "]"}], ",", "DotDashed", ",", 
+       RowBox[{"Thickness", "[", "0.007", "]"}]}], "]"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Directive", "[", 
+      RowBox[{"Orange", ",", 
+       RowBox[{"Dashing", "[", 
+        RowBox[{"{", 
+         RowBox[{
+         "0", ",", "Small", ",", "0", ",", "Small", ",", "Small", ",", 
+          "Small"}], "}"}], "]"}], ",", 
+       RowBox[{"Thickness", "[", "0.007", "]"}]}], "]"}]}], "}"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.6730942703358345`*^9, 3.6730942781942844`*^9}, {
+   3.673094376936932*^9, 3.6730944420006533`*^9}, {3.673094489809388*^9, 
+   3.67309449456066*^9}, {3.6730945665677786`*^9, 3.6730945677738476`*^9}, {
+   3.67309509582905*^9, 3.673095137532436*^9}, {3.673095200333028*^9, 
+   3.6730952229053187`*^9}, {3.6731414792965145`*^9, 3.673141484143792*^9}, {
+   3.6731415390329313`*^9, 3.673141548239458*^9}, {3.673141620768606*^9, 
+   3.6731416322892656`*^9}, 3.6833262376186433`*^9, {3.6835481558714514`*^9, 
+   3.6835481940178933`*^9}, {3.683548365118165*^9, 3.6835483755073195`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ListPlot", "[", 
+  RowBox[{
+   RowBox[{"EvsAddUTheoryIn", "[", 
+    RowBox[{"[", 
+     RowBox[{
+      RowBox[{"1", ";;", "5"}], ",", ";;", ",", "4", ",", ";;"}], "]"}], 
+    "]"}], ",", 
+   RowBox[{"Joined", "\[Rule]", "True"}], ",", 
+   RowBox[{"PlotRange", "\[Rule]", "Full"}], ",", 
+   RowBox[{"PlotStyle", "\[Rule]", "styles"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.683548458173436*^9, 3.6835484616265917`*^9}}],
+
 Cell[BoxData[
  RowBox[{"fig1MultiM", "=", 
   RowBox[{"Show", "[", "\[IndentingNewLine]", 
@@ -432,6 +543,15 @@ Cell[BoxData[
         RowBox[{"Large", ",", "Black", ",", 
          RowBox[{"FontFamily", "\[Rule]", "\"\<Arial\>\""}]}], "]"}]}]}], 
      "]"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"ListPlot", "[", 
+     RowBox[{
+      RowBox[{"EvsAddUTheoryIn", "[", 
+       RowBox[{"[", 
+        RowBox[{";;", ",", ";;", ",", "4", ",", ";;"}], "]"}], "]"}], ",", 
+      RowBox[{"Joined", "\[Rule]", "True"}], ",", 
+      RowBox[{"PlotRange", "\[Rule]", "Full"}], ",", 
+      RowBox[{"PlotStyle", "\[Rule]", "styles"}]}], "]"}], ",", 
+    "\[IndentingNewLine]", 
     RowBox[{"Graphics", "[", 
      RowBox[{"{", "\[IndentingNewLine]", 
       RowBox[{"Text", "[", 
@@ -456,7 +576,9 @@ Cell[BoxData[
    3.6831713217940226`*^9}, {3.6831714870001893`*^9, 3.683171498073721*^9}, 
    3.6831715297245502`*^9, {3.683172248710955*^9, 3.68317229161825*^9}, {
    3.6831727894769135`*^9, 3.6831728149616528`*^9}, {3.683325300408807*^9, 
-   3.683325307557855*^9}, {3.6833280586193027`*^9, 3.683328058693386*^9}}],
+   3.683325307557855*^9}, {3.6833280586193027`*^9, 3.683328058693386*^9}, {
+   3.683547845390298*^9, 3.6835478505621767`*^9}, {3.6835478817381573`*^9, 
+   3.6835479168812437`*^9}, {3.68354799627818*^9, 3.683548023537432*^9}}],
 
 Cell[CellGroupData[{
 
@@ -561,8 +683,131 @@ Cell[BoxData[
      RowBox[{"Large", ",", "Black", ",", 
       RowBox[{"FontFamily", "\[Rule]", "\"\<Arial\>\""}], ",", "Bold"}], 
      "]"}]}]}], "]"}]], "Input",
- CellChangeTimes->{{3.68238285761534*^9, 3.6823828733619075`*^9}}]
-}, Closed]]
+ CellChangeTimes->{{3.68238285761534*^9, 3.6823828733619075`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Show", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"ListPlot", "[", 
+    RowBox[{"ListSol0610TLGFinerBAndELargerEmax", ",", "\[IndentingNewLine]", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"Directive", "[", 
+         RowBox[{
+          RowBox[{"Darker", "[", "Blue", "]"}], ",", 
+          RowBox[{"PointSize", "[", "0.005", "]"}]}], "]"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Directive", "[", 
+         RowBox[{
+          RowBox[{"Darker", "[", "Red", "]"}], ",", 
+          RowBox[{"PointSize", "[", "0.005", "]"}]}], "]"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Directive", "[", 
+         RowBox[{
+          RowBox[{"Darker", "[", "Green", "]"}], ",", 
+          RowBox[{"PointSize", "[", "0.005", "]"}]}], "]"}]}], "}"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"ImageSize", "\[Rule]", "500"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"PlotRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0", ",", "4"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"0.022", ",", "0.03"}], "}"}]}], "}"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"AspectRatio", "\[Rule]", "1.618"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"PlotLegends", "\[Rule]", 
+      RowBox[{"Placed", "[", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"PointLegend", "[", "\[IndentingNewLine]", 
+         RowBox[{"label1", ",", "\[IndentingNewLine]", 
+          RowBox[{"LabelStyle", "\[Rule]", 
+           RowBox[{"Directive", "[", 
+            RowBox[{"15", ",", "Bold", ",", 
+             RowBox[{"FontFamily", "\[Rule]", "\"\<Arial\>\""}]}], "]"}]}], 
+          ",", "\[IndentingNewLine]", 
+          RowBox[{"LegendFunction", "\[Rule]", "Panel"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"LegendMargins", "\[Rule]", "0"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"LegendMarkers", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"Graphics", "[", 
+              RowBox[{"Disk", "[", "]"}], "]"}], ",", 
+             RowBox[{"Graphics", "[", 
+              RowBox[{"Disk", "[", "]"}], "]"}], ",", 
+             RowBox[{"Graphics", "[", 
+              RowBox[{"Disk", "[", "]"}], "]"}]}], "}"}]}]}], "]"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Scaled", "[", 
+           RowBox[{"{", 
+            RowBox[{"0.8", ",", "0.85"}], "}"}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"0", ",", "0.5"}], "}"}]}], "}"}]}], "]"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Frame", "\[Rule]", "True"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"FrameStyle", "\[Rule]", 
+      RowBox[{"Directive", "[", 
+       RowBox[{
+        RowBox[{"Thickness", "[", "0.004", "]"}], ",", "Black"}], "]"}]}], 
+     ",", "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{
+       RowBox[{"FrameTicks", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"yTicks", ",", "None"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Flatten", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"xTicks", ",", "xSubTicks"}], "}"}], ",", "1"}], "]"}],
+             ",", "None"}], "}"}]}], "}"}]}], ","}], "*)"}], 
+     "\[IndentingNewLine]", 
+     RowBox[{"FrameTicksStyle", "\[Rule]", 
+      RowBox[{"Directive", "[", 
+       RowBox[{
+        RowBox[{"Thickness", "[", "0.004", "]"}], ",", "Black"}], "]"}]}], 
+     ",", "\[IndentingNewLine]", 
+     RowBox[{"FrameLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<B/T\>\"", ",", "\"\<E/eV\>\""}], "}"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"LabelStyle", "\[Rule]", 
+      RowBox[{"Directive", "[", 
+       RowBox[{"Large", ",", "Black", ",", 
+        RowBox[{"FontFamily", "\[Rule]", "\"\<Arial\>\""}]}], "]"}]}]}], 
+    "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"ListPlot", "[", 
+    RowBox[{
+     RowBox[{"EvsAddUTheoryIn", "[", 
+      RowBox[{"[", 
+       RowBox[{";;", ",", ";;", ",", "4", ",", ";;"}], "]"}], "]"}], ",", 
+     RowBox[{"Joined", "\[Rule]", "True"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", "Full"}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", "styles"}]}], "]"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Graphics", "[", 
+    RowBox[{"{", "\[IndentingNewLine]", 
+     RowBox[{"Text", "[", 
+      RowBox[{
+       RowBox[{"Style", "[", 
+        RowBox[{"\"\<(a)\>\"", ",", "Italic", ",", "Large", ",", 
+         RowBox[{"FontFamily", "\[Rule]", "\"\<Times New Roman\>\""}]}], 
+        "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0.2", ",", "0.018"}], "}"}]}], "]"}], "}"}], "]"}]}], 
+  "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{{3.683548109660248*^9, 3.6835481147384386`*^9}, {
+  3.6835482331457815`*^9, 3.6835482655722456`*^9}}]
+}, Open  ]]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -600,31 +845,8 @@ Cell[BoxData[
  CellChangeTimes->{
   3.6823836786550303`*^9, {3.6823837198915*^9, 3.6823837348991814`*^9}, 
    3.6823837734206305`*^9, 3.6831712930149784`*^9, 3.683174097431762*^9, 
-   3.6833253233961043`*^9}]
+   3.6833253233961043`*^9, 3.6835476866489897`*^9}]
 }, Open  ]],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"fticks", "[", 
-   RowBox[{"min_", ",", "max_"}], "]"}], ":=", 
-  RowBox[{"Table", "[", 
-   RowBox[{
-    RowBox[{"If", "[", 
-     RowBox[{
-      RowBox[{"EvenQ", "[", "i", "]"}], ",", 
-      RowBox[{"{", 
-       RowBox[{"i", ",", "i", ",", 
-        RowBox[{"{", 
-         RowBox[{".1", ",", "0"}], "}"}], ",", "Red"}], "}"}], ",", 
-      RowBox[{"{", 
-       RowBox[{"i", ",", "i", ",", 
-        RowBox[{"{", 
-         RowBox[{".05", ",", "0"}], "}"}], ",", "Blue"}], "}"}]}], "]"}], ",", 
-    RowBox[{"{", 
-     RowBox[{"i", ",", 
-      RowBox[{"Ceiling", "[", "min", "]"}], ",", 
-      RowBox[{"Floor", "[", "max", "]"}], ",", "1"}], "}"}]}], 
-   "]"}]}]], "Input"],
 
 Cell[BoxData[
  RowBox[{"fig1PMTau", "=", 
@@ -781,6 +1003,178 @@ Cell[BoxData[
    3.683327286008093*^9, 3.6833273442684546`*^9}, {3.6833279020921116`*^9, 
    3.68332803613233*^9}}],
 
+Cell[CellGroupData[{
+
+Cell["zoom in", "Subsection",
+ CellChangeTimes->{{3.683548289166526*^9, 3.6835482904166064`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Show", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"ListPlot", "[", 
+    RowBox[{
+     RowBox[{"Flatten", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+        "ListSol0610TLGFinerBAndELargerEmax", ",", "ListSol0624TLGMT"}], 
+        "}"}], ",", "1"}], "]"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"Directive", "[", 
+         RowBox[{
+          RowBox[{"Darker", "[", "Green", "]"}], ",", 
+          RowBox[{"PointSize", "[", "0.005", "]"}]}], "]"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Directive", "[", 
+         RowBox[{
+          RowBox[{"Darker", "[", "Green", "]"}], ",", 
+          RowBox[{"PointSize", "[", "0.005", "]"}]}], "]"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Directive", "[", 
+         RowBox[{
+          RowBox[{"Darker", "[", "Green", "]"}], ",", 
+          RowBox[{"PointSize", "[", "0.005", "]"}]}], "]"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Directive", "[", 
+         RowBox[{
+          RowBox[{"Darker", "[", "Red", "]"}], ",", 
+          RowBox[{"PointSize", "[", "0.005", "]"}]}], "]"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Directive", "[", 
+         RowBox[{
+          RowBox[{"Darker", "[", "Red", "]"}], ",", 
+          RowBox[{"PointSize", "[", "0.005", "]"}]}], "]"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Directive", "[", 
+         RowBox[{
+          RowBox[{"Darker", "[", "Red", "]"}], ",", 
+          RowBox[{"PointSize", "[", "0.005", "]"}]}], "]"}]}], "}"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"ImageSize", "\[Rule]", "500"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"PlotRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0", ",", "4"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"0.022", ",", "0.03"}], "}"}]}], "}"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"AspectRatio", "\[Rule]", "1.618"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{
+       RowBox[{"PlotLegends", "\[Rule]", 
+        RowBox[{"Placed", "[", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"PointLegend", "[", "\[IndentingNewLine]", 
+           RowBox[{"label11", ",", "\[IndentingNewLine]", 
+            RowBox[{"LabelStyle", "\[Rule]", 
+             RowBox[{"Directive", "[", 
+              RowBox[{"15", ",", "Bold", ",", 
+               RowBox[{"FontFamily", "\[Rule]", "\"\<Arial\>\""}]}], "]"}]}], 
+            ",", "\[IndentingNewLine]", 
+            RowBox[{"LegendFunction", "\[Rule]", "Panel"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"LegendMargins", "\[Rule]", "0"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"LegendMarkers", "\[Rule]", 
+             RowBox[{"Graphics", "[", 
+              RowBox[{"Disk", "[", "]"}], "]"}]}]}], "]"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Scaled", "[", 
+             RowBox[{"{", 
+              RowBox[{"0.85", ",", "0.85"}], "}"}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"0", ",", "0.5"}], "}"}]}], "}"}]}], "]"}]}], ","}], 
+      "*)"}], "\[IndentingNewLine]", 
+     RowBox[{"Frame", "\[Rule]", "True"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"FrameStyle", "\[Rule]", 
+      RowBox[{"Directive", "[", 
+       RowBox[{
+        RowBox[{"Thickness", "[", "0.004", "]"}], ",", "Black"}], "]"}]}], 
+     ",", "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{
+       RowBox[{"FrameTicks", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"yTicks", ",", "None"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Flatten", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"xTicks", ",", "xSubTicks"}], "}"}], ",", "1"}], "]"}],
+             ",", "None"}], "}"}]}], "}"}]}], ","}], "*)"}], 
+     "\[IndentingNewLine]", 
+     RowBox[{"FrameTicks", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+       "Automatic", ",", "Automatic", ",", "Automatic", ",", "Automatic"}], 
+       "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"FrameTicksStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Directive", "[", 
+         RowBox[{
+          RowBox[{"Thickness", "[", "0.004", "]"}], ",", 
+          RowBox[{"FontOpacity", "\[Rule]", "0"}], ",", 
+          RowBox[{"FontSize", "\[Rule]", "0"}]}], "]"}], ",", 
+        RowBox[{"Directive", "[", 
+         RowBox[{
+          RowBox[{"Thickness", "[", "0.004", "]"}], ",", "Black"}], "]"}]}], 
+       "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"FrameLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<B/T\>\"", ",", "None"}], "}"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"LabelStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"Directive", "[", 
+        RowBox[{"Large", ",", "Black", ",", 
+         RowBox[{"FontFamily", "\[Rule]", "\"\<Arial\>\""}]}], "]"}], 
+       "}"}]}]}], "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"ListPlot", "[", 
+    RowBox[{
+     RowBox[{"EvsAddUTheoryIn", "[", 
+      RowBox[{"[", 
+       RowBox[{";;", ",", ";;", ",", "4", ",", ";;"}], "]"}], "]"}], ",", 
+     RowBox[{"Joined", "\[Rule]", "True"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", "Full"}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", "styles"}]}], "]"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"ListPlot", "[", 
+    RowBox[{
+     RowBox[{"EvsAddUTheoryInMT", "[", 
+      RowBox[{"[", 
+       RowBox[{";;", ",", ";;", ",", "4", ",", ";;"}], "]"}], "]"}], ",", 
+     RowBox[{"Joined", "\[Rule]", "True"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", "Full"}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", "styles"}]}], "]"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Graphics", "[", 
+    RowBox[{"{", "\[IndentingNewLine]", 
+     RowBox[{"Text", "[", 
+      RowBox[{
+       RowBox[{"Style", "[", 
+        RowBox[{"\"\<(b)\>\"", ",", "Italic", ",", "Large", ",", 
+         RowBox[{"FontFamily", "\[Rule]", "\"\<Times New Roman\>\""}]}], 
+        "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0.2", ",", "0.018"}], "}"}]}], "]"}], "}"}], "]"}]}], 
+  "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{{3.6835483228037853`*^9, 3.6835483482514873`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Total fig 1", "Subsection",
+ CellChangeTimes->{{3.6835482820414357`*^9, 3.683548285307169*^9}}],
+
 Cell[BoxData[
  RowBox[{"fig1", "=", 
   RowBox[{"GraphicsRow", "[", 
@@ -820,6 +1214,7 @@ Cell[BoxData["\<\"TheoryPotLevels.png\"\>"], "Output",
  CellChangeTimes->{3.6831719217130404`*^9, 3.683172082756896*^9, 
   3.683172221384088*^9, 3.6831723395936584`*^9, 3.6831728276251736`*^9, 
   3.6833254008361073`*^9, 3.683328278970132*^9}]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
@@ -1462,11 +1857,11 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 661, 17, 31, "Input"],
-Cell[1222, 39, 704, 18, 31, "Input"],
-Cell[1929, 59, 682, 17, 31, "Input"],
-Cell[2614, 78, 655, 17, 31, "Input"],
-Cell[3272, 97, 703, 17, 31, "Input"],
+Cell[558, 20, 661, 17, 52, "Input"],
+Cell[1222, 39, 704, 18, 72, "Input"],
+Cell[1929, 59, 682, 17, 72, "Input"],
+Cell[2614, 78, 655, 17, 72, "Input"],
+Cell[3272, 97, 703, 17, 72, "Input"],
 Cell[3978, 116, 643, 17, 31, "Input"],
 Cell[CellGroupData[{
 Cell[4646, 137, 229, 5, 67, "Subchapter"],
@@ -1477,49 +1872,59 @@ Cell[11289, 310, 171, 2, 51, "Subchapter"],
 Cell[11463, 314, 376, 11, 31, "Input"],
 Cell[CellGroupData[{
 Cell[11864, 329, 184, 2, 70, "Section"],
-Cell[12051, 333, 5672, 125, 532, "Input"],
+Cell[12051, 333, 2059, 54, 52, "Input"],
+Cell[14113, 389, 1790, 40, 112, "Input"],
+Cell[15906, 431, 443, 11, 31, "Input"],
+Cell[16352, 444, 6201, 136, 552, "Input"],
 Cell[CellGroupData[{
-Cell[17748, 462, 146, 2, 49, "Subsection"],
-Cell[17897, 466, 3848, 97, 452, "Input"]
-}, Closed]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[21794, 569, 147, 1, 70, "Section"],
-Cell[CellGroupData[{
-Cell[21966, 574, 729, 17, 31, "Input"],
-Cell[22698, 593, 444, 9, 31, "Output"]
-}, Open  ]],
-Cell[23157, 605, 701, 21, 31, "Input"],
-Cell[23861, 628, 6636, 153, 612, "Input"],
-Cell[30500, 783, 881, 16, 31, "Input"],
-Cell[CellGroupData[{
-Cell[31406, 803, 398, 8, 52, "Input"],
-Cell[31807, 813, 244, 3, 31, "Output"],
-Cell[32054, 818, 242, 3, 31, "Output"]
-}, Open  ]]
+Cell[22578, 584, 146, 2, 49, "Subsection"],
+Cell[22727, 588, 3848, 97, 452, "Input"],
+Cell[26578, 687, 4970, 121, 552, "Input"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[32357, 828, 231, 5, 67, "Subchapter"],
-Cell[32591, 835, 849, 19, 31, "Input"],
-Cell[33443, 856, 1441, 31, 212, "Input"],
-Cell[34887, 889, 1260, 28, 212, "Input"],
+Cell[31597, 814, 147, 1, 70, "Section"],
 Cell[CellGroupData[{
-Cell[36172, 921, 93, 1, 49, "Subsection"],
-Cell[36268, 924, 3516, 98, 252, "Input"],
-Cell[39787, 1024, 2969, 69, 52, "Input"],
-Cell[42759, 1095, 2498, 55, 132, "Input"]
+Cell[31769, 819, 729, 17, 31, "Input"],
+Cell[32501, 838, 468, 9, 31, "Output"]
+}, Open  ]],
+Cell[32984, 850, 6636, 153, 612, "Input"],
+Cell[CellGroupData[{
+Cell[39645, 1007, 97, 1, 49, "Subsection"],
+Cell[39745, 1010, 6419, 159, 652, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[45294, 1155, 98, 1, 49, "Subsection"],
-Cell[45395, 1158, 150, 3, 31, "Input"],
-Cell[45548, 1163, 4718, 110, 372, "Input"],
-Cell[50269, 1275, 5403, 121, 352, "Input"],
-Cell[55675, 1398, 859, 17, 31, "Input"],
+Cell[46201, 1174, 101, 1, 49, "Subsection"],
+Cell[46305, 1177, 881, 16, 31, "Input"],
 Cell[CellGroupData[{
-Cell[56559, 1419, 444, 8, 52, "Input"],
-Cell[57006, 1429, 387, 6, 31, "Output"],
-Cell[57396, 1437, 385, 6, 31, "Output"]
+Cell[47211, 1197, 398, 8, 52, "Input"],
+Cell[47612, 1207, 244, 3, 31, "Output"],
+Cell[47859, 1212, 242, 3, 31, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[48174, 1223, 231, 5, 67, "Subchapter"],
+Cell[48408, 1230, 849, 19, 31, "Input"],
+Cell[49260, 1251, 1441, 31, 212, "Input"],
+Cell[50704, 1284, 1260, 28, 212, "Input"],
+Cell[CellGroupData[{
+Cell[51989, 1316, 93, 1, 49, "Subsection"],
+Cell[52085, 1319, 3516, 98, 252, "Input"],
+Cell[55604, 1419, 2969, 69, 52, "Input"],
+Cell[58576, 1490, 2498, 55, 132, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[61111, 1550, 98, 1, 49, "Subsection"],
+Cell[61212, 1553, 150, 3, 31, "Input"],
+Cell[61365, 1558, 4718, 110, 372, "Input"],
+Cell[66086, 1670, 5403, 121, 352, "Input"],
+Cell[71492, 1793, 859, 17, 31, "Input"],
+Cell[CellGroupData[{
+Cell[72376, 1814, 444, 8, 52, "Input"],
+Cell[72823, 1824, 387, 6, 31, "Output"],
+Cell[73213, 1832, 385, 6, 31, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
