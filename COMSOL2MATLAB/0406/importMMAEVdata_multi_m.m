@@ -3,9 +3,15 @@
 %% parameters
 dirname = 'C:\Users\jwt\Documents\GitHub\GQDProject\TLGAnalyticTheory\data\MMAdata\';
 % SolName = 'ListSol0919TLGExpPotLM';
-SolName = 'ListSol0920TLGExpPotLMFB';
-mVals = -200:20:0;
-lenB = 800;
+% SolName = 'ListSol0920TLGExpPotLMFB';
+% SolName = 'ListSol0610TLGFinerBAndELargerEmax';
+SolName = 'ListSol0922TLGTheoPotLM';
+% SolName = 'ListSol0923TLGTheoPotNearEdge';
+
+% mVals = -200:20:0;
+mVals = -1:1:1;
+BVals = 0.01:0.01:4;
+lenB = length(BVals);
 lenM = length(mVals);
 %% initialization
 AllEVs = NaN(10000,lenM);
