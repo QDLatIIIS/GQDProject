@@ -5,16 +5,20 @@ dirname = 'C:\Users\jwt\Documents\GitHub\GQDProject\TLGAnalyticTheory\data\MMAda
 % SolName = 'ListSol0919TLGExpPotLM';
 % SolName = 'ListSol0920TLGExpPotLMFB';
 % SolName = 'ListSol0610TLGFinerBAndELargerEmax';
-SolName = 'ListSol0922TLGTheoPotLM';
+% SolName = 'ListSol0922TLGTheoPotLM';
 % SolName = 'ListSol0923TLGTheoPotNearEdge';
+SolName = 'ListSol0925TLGTheoPotMTNearEdge';
 
 % mVals = -200:20:0;
 mVals = -1:1:1;
-BVals = 0.01:0.01:4;
+% mVals = -2:2:1;
+% BVals = 0.01:0.01:4;
+BVals = 0.002:0.002:4;
 lenB = length(BVals);
 lenM = length(mVals);
+estiNumOfE = 25000;
 %% initialization
-AllEVs = NaN(10000,lenM);
+AllEVs = NaN(estiNumOfE,lenM);
 AllBs = AllEVs;
 % AllEVs = [];
 
@@ -23,8 +27,8 @@ i = 1;
 for m = mVals
     filename = [dirname SolName '_m=' num2str(m) '.dat'];
     
-    [B, EVs] = importMMAEVdata(filename);
+    [Bs, EVs] = importMMAEVdata(filename);
     AllEVs(1:length(EVs),i) = EVs;
-    AllBs(1:length(EVs),i) = B;
+    AllBs(1:length(EVs),i) = Bs;
     i = i + 1;
 end

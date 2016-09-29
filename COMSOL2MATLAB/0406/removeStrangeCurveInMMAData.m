@@ -6,13 +6,21 @@
 %% parameters
 % Bmin = 0.01;
 % Bstep = 0.01;
-Bmin = 0.005;
-Bstep = 0.005;
+% Bmin = 0.005;
+% Bstep = 0.005;
+Bmin = 0.002;
+Bstep = 0.002;
 Bmax = 4;
-len_m = 11;
+% len_m = 11;
+len_m = lenM;
 % thre_E = 0.00002;
-thre_E = 0.000002;
+% thre_E = 0.000002;
+thre_E = 5e-7;
+numOfCurves = 1;
 
+% for NearEdge, these intervals are under: thre_E = 5e-7;
+BExceptionIntervals = [1.112, 1.142; 1.33, 1.374; 1.672, 1.722; 2.25, 2.32];
+specialBExceptionInterval = [3.42,3.584];
 
 %% initialization
 AllEVs_removed = AllEVs;
@@ -45,12 +53,31 @@ B_track = [];
 %% remove ver 2
 
 for im = 1:len_m
+    if im == 2
+        tmpIntervals = [BExceptionIntervals;specialBExceptionInterval];
+    else
+        tmpIntervals = BExceptionIntervals;
+    end
     for Bi = Bmin:Bstep:Bmax
+        
+        % do not remove for certain B intervals
+        isInInterval = false;
+        tmpSize = size(tmpIntervals);
+        for iInterval = 1:tmpSize(1)
+            if(Bi> tmpIntervals(iInterval,1) && Bi<tmpIntervals(iInterval,2))
+                isInInterval = true;
+                break;
+            end
+        end
+        if isInInterval
+            continue;
+        end
+        
         iStart = find(AllBs(:,im) >= Bi-Bstep/2,1,'first');
         iEnd = find(AllBs(:,im) <= Bi+Bstep/2,1,'last');
         tmpEVs = AllEVs(iStart:iEnd,im);
         iB = round((Bi-Bmin)/Bstep+1);
-        for iC = 1:4
+        for iC = 1:numOfCurves
             tmpDevs = abs(tmpEVs - CurveData(iB,iC));
             [tmpDev,ind] = min(tmpDevs);
             if tmpDev < thre_E
@@ -61,7 +88,7 @@ for im = 1:len_m
     end
 end
 
-% remove particular points
+%% remove particular points
 EvalToRemove = -0.000484;
 tmpThres = 0.0000015;
 tmpBStart = 0.3;
@@ -78,6 +105,13 @@ for im = 11
             AllEVs_removed(iStart+ind-1,im) = NaN;
         end
     end
+end
+
+%% plot to check the result of the remove
+figure
+hold all
+for i = 1:lenM
+plot(AllBs(:,i),AllEVs_removed(:,i),'.')
 end
 
 
@@ -117,8 +151,11 @@ end
 
 
 %% output EVs in meV
-solName = 'ListSol0920TLGExpPotLMFBAPmeV';
-ms = -200:20:0;
+% solName = 'ListSol0920TLGExpPotLMFBAPmeV';
+solName = 'ListSol0925TLGTheoPotMTNearEdgeAPmeV';
+
+% ms = -200:20:0;
+ms = -1:1:1;
 for im = 1:len_m
     ind_lastNoneNaN = find(~isnan(AllEVs_removed_NaNRemoved(:,im)),1,'last');
     tmpOut = [AllBs_NaNRemoved(1:ind_lastNoneNaN,im), ...
