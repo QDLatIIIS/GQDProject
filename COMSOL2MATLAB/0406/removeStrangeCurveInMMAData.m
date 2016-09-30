@@ -2,6 +2,9 @@
 % You need to have CurveData already in the Workspace, which are data
 % for the four strange curve. B value for those curves should be the same
 % as for the EV data from MMA. THIS SCRIPT DOES NOT CHECK THIS!
+%
+% This script is written to be run section by section, as needed
+%
 
 %% parameters
 % Bmin = 0.01;
@@ -15,14 +18,17 @@ Bmax = 4;
 len_m = lenM;
 % thre_E = 0.00002;
 % thre_E = 0.000002;
-thre_E = 4e-7;
+thre_E = 2e-7;
 numOfCurves = 1;
 
-% for NearEdge, these intervals are under: thre_E = 5e-7;
+% for NearEdge, minus tau, sthese intervals are under: thre_E = 5e-7;
 % BExceptionIntervals = [1.112, 1.142; 1.33, 1.374; 1.672, 1.722; 2.25, 2.32];
 % specialBExceptionInterval = [3.42,3.584];
 BExceptionIntervals = [];
 specialBExceptionInterval = [];
+% positive tau, thre_E = 2e-7;
+BExceptionIntervals = [1.116, 1.144; 1.338, 1.382; 1.686, 1.726; 2.27, 2.32];
+specialBExceptionInterval = [3.482,3.584];
 
 %% initialization
 AllEVs_removed = AllEVs;
@@ -122,7 +128,8 @@ end
 %% remove NaN in AllEVs_removed
 % iEV_max = 3740;     % largest index of non NaN EV, look it up in AllEVs_removed
 % iEV_max = 8650;
-iEV_max = 21486;
+% iEV_max = 21486;  %minus tau
+iEV_max = 13315;    %positive tau
 AllEVs_removed_NaNRemoved = NaN(iEV_max,len_m);
 AllBs_NaNRemoved = NaN(iEV_max,len_m);
 for im = 1:len_m
@@ -156,7 +163,8 @@ end
 
 %% output EVs in meV
 % solName = 'ListSol0920TLGExpPotLMFBAPmeV';
-solName = 'ListSol0925TLGTheoPotMTNearEdgeAPmeV';
+% solName = 'ListSol0925TLGTheoPotMTNearEdgeAPmeV';
+solName = 'ListSol0925TLGTheoPotPTNearEdgeAPmeV';
 
 % ms = -200:20:0;
 ms = -1:1:1;

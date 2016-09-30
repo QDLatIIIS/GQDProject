@@ -7,7 +7,8 @@ dirname = 'C:\Users\jwt\Documents\GitHub\GQDProject\TLGAnalyticTheory\data\MMAda
 % SolName = 'ListSol0610TLGFinerBAndELargerEmax';
 % SolName = 'ListSol0922TLGTheoPotLM';
 % SolName = 'ListSol0923TLGTheoPotNearEdge';
-SolName = 'ListSol0925TLGTheoPotMTNearEdge';
+% SolName = 'ListSol0925TLGTheoPotMTNearEdge';
+SolName = 'ListSol0923TLGTheoPotNearEdge';
 
 % mVals = -200:20:0;
 mVals = -1:1:1;
@@ -16,7 +17,8 @@ mVals = -1:1:1;
 BVals = 0.002:0.002:4;
 lenB = length(BVals);
 lenM = length(mVals);
-estiNumOfE = 25000;
+% estiNumOfE = 25000;
+estiNumOfE = 20000;
 %% initialization
 AllEVs = NaN(estiNumOfE,lenM);
 AllBs = AllEVs;

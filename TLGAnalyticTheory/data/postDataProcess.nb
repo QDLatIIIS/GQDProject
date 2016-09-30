@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     17239,        501]
-NotebookOptionsPosition[     16051,        456]
-NotebookOutlinePosition[     16390,        471]
-CellTagsIndexPosition[     16347,        468]
+NotebookDataLength[     21467,        612]
+NotebookOptionsPosition[     19966,        558]
+NotebookOutlinePosition[     20305,        573]
+CellTagsIndexPosition[     20262,        570]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -274,7 +274,39 @@ Cell[BoxData[
    3.684149468476635*^9}, {3.6841495185691285`*^9, 3.684149519569149*^9}, {
    3.6841496253611298`*^9, 3.684149684294785*^9}, {3.6841497280277405`*^9, 
    3.6841498541091614`*^9}, {3.684149919126376*^9, 3.6841499467329755`*^9}, {
-   3.684191769759507*^9, 3.684191944802826*^9}}]
+   3.684191769759507*^9, 3.684191944802826*^9}, {3.684193613547244*^9, 
+   3.6841936163492646`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SCDataTheoPotPTNearEdge", "=", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"0.004", ",", "0.0240638"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0.39", ",", "0.0241414"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0.816", ",", "0.0242234"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1.016", ",", "0.0242608"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1.222", ",", "0.0242984"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1.496", ",", "0.0243472"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1.842", ",", "0.0244066"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"2.168", ",", "0.0244604"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"2.608", ",", "0.0245296"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"3.358", ",", "0.024638"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"4", ",", "0.024721"}], "}"}]}], "\[IndentingNewLine]", "}"}]}],
+   ";"}]], "Input",
+ CellChangeTimes->{{3.6841936225196257`*^9, 3.684193682564289*^9}, {
+   3.6841937148152113`*^9, 3.684193858517269*^9}, 3.684193965785471*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -305,7 +337,7 @@ Cell[BoxData[
 
 Cell[BoxData[
  RowBox[{
-  RowBox[{"fittedSCDTPTMNE", "=", 
+  RowBox[{"fittedSCDTPMTNE", "=", 
    RowBox[{"Table", "[", 
     RowBox[{
      RowBox[{"Fit", "[", 
@@ -325,7 +357,27 @@ Cell[BoxData[
    3.6841474439614687`*^9, 3.6841474518990707`*^9}, {3.6841481782535515`*^9, 
    3.6841481813306456`*^9}, {3.6841487678184323`*^9, 3.684148770209146*^9}, {
    3.684148858582936*^9, 3.6841488926383142`*^9}, 3.6841489272677517`*^9, {
-   3.6841920198431454`*^9, 3.6841920386014533`*^9}}]
+   3.6841920198431454`*^9, 3.6841920386014533`*^9}, {3.6841939222005014`*^9, 
+   3.6841939230391183`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"fittedSCDTPPTNE", "=", 
+   RowBox[{"Fit", "[", 
+    RowBox[{"SCDataTheoPotPTNearEdge", ",", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "x", ",", 
+       RowBox[{"x", "^", "2"}], ",", 
+       RowBox[{"x", "^", "3"}], ",", 
+       RowBox[{"x", "^", "4"}]}], "}"}], ",", "x"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6833318580601077`*^9, 3.683331925831038*^9}, {
+   3.6833319588097286`*^9, 3.683331966610299*^9}, 3.683332803274139*^9, {
+   3.6841469654687595`*^9, 3.6841469754269967`*^9}, 3.6841470425829096`*^9, {
+   3.6841474439614687`*^9, 3.6841474518990707`*^9}, {3.6841481782535515`*^9, 
+   3.6841481813306456`*^9}, {3.6841487678184323`*^9, 3.684148770209146*^9}, {
+   3.684148858582936*^9, 3.6841488926383142`*^9}, 3.6841489272677517`*^9, {
+   3.6841920198431454`*^9, 3.6841920386014533`*^9}, {3.684193880239726*^9, 
+   3.6841938999967365`*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -364,7 +416,7 @@ Cell[BoxData[
   RowBox[{"SCDAllBFromFitTPMTNE", "=", 
    RowBox[{"Table", "[", 
     RowBox[{
-     RowBox[{"fittedSCDTPTMNE", "/.", 
+     RowBox[{"fittedSCDTPMTNE", "/.", 
       RowBox[{"{", 
        RowBox[{"x", "\[Rule]", "BB"}], "}"}]}], ",", 
      RowBox[{"{", 
@@ -372,7 +424,24 @@ Cell[BoxData[
   ";"}]], "Input",
  CellChangeTimes->{{3.6833575730502815`*^9, 3.6833575782222233`*^9}, {
    3.6841470155273237`*^9, 3.6841470209180737`*^9}, 3.684147054989379*^9, {
-   3.6841474343675737`*^9, 3.6841474567584534`*^9}}],
+   3.6841474343675737`*^9, 3.6841474567584534`*^9}, {3.684193931411044*^9, 
+   3.6841939319794464`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SCDAllBFromFitTPPTNE", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"fittedSCDTPPTNE", "/.", 
+      RowBox[{"{", 
+       RowBox[{"x", "\[Rule]", "BB"}], "}"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"BB", ",", "0.002", ",", "4", ",", "0.002"}], "}"}]}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.6833575730502815`*^9, 3.6833575782222233`*^9}, {
+   3.6841470155273237`*^9, 3.6841470209180737`*^9}, 3.684147054989379*^9, {
+   3.6841474343675737`*^9, 3.6841474567584534`*^9}, {3.684193931411044*^9, 
+   3.6841939319794464`*^9}, {3.684193978099219*^9, 3.6841939815006437`*^9}}],
 
 Cell[BoxData[
  RowBox[{
@@ -381,13 +450,34 @@ Cell[BoxData[
     RowBox[{
      RowBox[{"{", 
       RowBox[{"BB", ",", 
-       RowBox[{"fittedSCDTPTMNE", "/.", 
+       RowBox[{"fittedSCDTPMTNE", "/.", 
         RowBox[{"{", 
          RowBox[{"x", "\[Rule]", "BB"}], "}"}]}]}], "}"}], ",", 
      RowBox[{"{", 
       RowBox[{"BB", ",", "0.002", ",", "4", ",", "0.002"}], "}"}]}], "]"}]}], 
   ";"}]], "Input",
- CellChangeTimes->{{3.6841475948399677`*^9, 3.684147607552419*^9}}]
+ CellChangeTimes->{{3.6841475948399677`*^9, 3.684147607552419*^9}, {
+  3.68419392660365*^9, 3.6841939273952227`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SCDAllBFromFitTPPTNEToPlot", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"BB", ",", 
+       RowBox[{"fittedSCDTPPTNE", "/.", 
+        RowBox[{"{", 
+         RowBox[{"x", "\[Rule]", "BB"}], "}"}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"BB", ",", "0.002", ",", "4", ",", "0.002"}], "}"}]}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.6841475948399677`*^9, 3.684147607552419*^9}, {
+  3.6841939164404097`*^9, 3.684193939067499*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ListPlot", "[", "SCDAllBFromFitTPPTNEToPlot", "]"}]], "Input",
+ CellChangeTimes->{{3.684193949897175*^9, 3.684193954941759*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -435,7 +525,19 @@ Cell[BoxData["\<\"SCDAllBFromFitTPMTNE.dat\"\>"], "Output",
  CellChangeTimes->{
   3.684147282800898*^9, {3.6841475351691103`*^9, 3.6841475559506407`*^9}, 
    3.6841481924869814`*^9, 3.6841487767091894`*^9, 3.6841489399241085`*^9, 
-   3.6841499547017636`*^9}]
+   3.6841499547017636`*^9, 3.6841921248477225`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", 
+  RowBox[{"\"\<SCDAllBFromFitTPPTNE.dat\>\"", ",", "SCDAllBFromFitTPPTNE"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.6841940006092105`*^9, 3.6841940014438095`*^9}}],
+
+Cell[BoxData["\<\"SCDAllBFromFitTPPTNE.dat\"\>"], "Output",
+ CellChangeTimes->{3.684194004135705*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -454,7 +556,7 @@ Cell[BoxData[
   3.684147630393982*^9}}]
 }, Open  ]]
 },
-WindowSize->{944, 943},
+WindowSize->{944, 849},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
 FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 1, 2014)",
 StyleDefinitions->"Default.nb"
@@ -473,35 +575,44 @@ Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 114, 1, 70, "Section"],
 Cell[697, 25, 5529, 160, 292, "Input"],
-Cell[6229, 187, 3752, 89, 232, "Input"]
+Cell[6229, 187, 3804, 90, 232, "Input"],
+Cell[10036, 279, 1127, 29, 112, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[10018, 281, 104, 1, 70, "Section"],
-Cell[10125, 284, 759, 19, 31, "Input"],
-Cell[10887, 305, 1031, 22, 31, "Input"]
+Cell[11200, 313, 104, 1, 70, "Section"],
+Cell[11307, 316, 759, 19, 31, "Input"],
+Cell[12069, 337, 1085, 23, 31, "Input"],
+Cell[13157, 362, 894, 17, 31, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[11955, 332, 118, 1, 70, "Section"],
-Cell[12076, 335, 384, 11, 31, "Input"],
-Cell[12463, 348, 392, 11, 31, "Input"],
-Cell[12858, 361, 532, 13, 31, "Input"],
-Cell[13393, 376, 466, 13, 31, "Input"]
+Cell[14088, 384, 118, 1, 70, "Section"],
+Cell[14209, 387, 384, 11, 31, "Input"],
+Cell[14596, 400, 392, 11, 31, "Input"],
+Cell[14991, 413, 584, 14, 31, "Input"],
+Cell[15578, 429, 632, 14, 31, "Input"],
+Cell[16213, 445, 516, 14, 31, "Input"],
+Cell[16732, 461, 517, 14, 31, "Input"],
+Cell[17252, 477, 152, 2, 31, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[13896, 394, 91, 1, 70, "Section"],
+Cell[17441, 484, 91, 1, 70, "Section"],
 Cell[CellGroupData[{
-Cell[14012, 399, 193, 4, 31, "Input"],
-Cell[14208, 405, 170, 2, 31, "Output"]
+Cell[17557, 489, 193, 4, 31, "Input"],
+Cell[17753, 495, 170, 2, 31, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[14415, 412, 246, 5, 31, "Input"],
-Cell[14664, 419, 193, 2, 31, "Output"]
+Cell[17960, 502, 246, 5, 31, "Input"],
+Cell[18209, 509, 193, 2, 31, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[14894, 426, 258, 5, 31, "Input"],
-Cell[15155, 433, 258, 4, 31, "Output"]
+Cell[18439, 516, 258, 5, 31, "Input"],
+Cell[18700, 523, 282, 4, 31, "Output"]
 }, Open  ]],
-Cell[15428, 440, 607, 13, 72, "Input"]
+Cell[CellGroupData[{
+Cell[19019, 532, 205, 4, 31, "Input"],
+Cell[19227, 538, 101, 1, 31, "Output"]
+}, Open  ]],
+Cell[19343, 542, 607, 13, 72, "Input"]
 }, Open  ]]
 }
 ]

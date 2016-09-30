@@ -19,16 +19,18 @@ if nargin<=2
     startRow = 1;
     endRow = inf;
     if nargin<=1
+%         filename =...
+%             'C:\Users\jwt\Documents\GitHub\GQDProject\TLGAnalyticTheory\data\MMAdata\SCDAllBFromFitTPMTNE.dat';
         filename =...
-            'C:\Users\jwt\Documents\GitHub\GQDProject\TLGAnalyticTheory\data\MMAdata\SCDAllBFromFitTPMTNE.dat';
+            'C:\Users\jwt\Documents\GitHub\GQDProject\TLGAnalyticTheory\data\MMAdata\SCDAllBFromFitTPPTNE.dat';
     end
 end
 
 %% Format string for each line of text:
 %   column1: double (%f)
 % For more information, see the TEXTSCAN documentation.
-% formatSpec = '%f%[^\n\r]';
-formatSpec = '%f%f%[^\n\r]';
+formatSpec = '%f%[^\n\r]';
+% formatSpec = '%f%f%[^\n\r]';
 
 %% Open the text file.
 fileID = fopen(filename,'r');
@@ -55,5 +57,5 @@ fclose(fileID);
 
 %% Allocate imported array to column variable names
 curveDataMT(:,1) = dataArray{:, 1};
-curveDataMT(:,2) = dataArray{:, 2};
+% curveDataMT(:,2) = dataArray{:, 2};
 
