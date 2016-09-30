@@ -27,7 +27,8 @@ end
 %% Format string for each line of text:
 %   column1: double (%f)
 % For more information, see the TEXTSCAN documentation.
-formatSpec = '%f%[^\n\r]';
+% formatSpec = '%f%[^\n\r]';
+formatSpec = '%f%f%[^\n\r]';
 
 %% Open the text file.
 fileID = fopen(filename,'r');
@@ -53,5 +54,6 @@ fclose(fileID);
 % script.
 
 %% Allocate imported array to column variable names
-curveDataMT = dataArray{:, 1};
+curveDataMT(:,1) = dataArray{:, 1};
+curveDataMT(:,2) = dataArray{:, 2};
 

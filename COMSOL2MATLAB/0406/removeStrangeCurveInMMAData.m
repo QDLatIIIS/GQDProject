@@ -15,12 +15,14 @@ Bmax = 4;
 len_m = lenM;
 % thre_E = 0.00002;
 % thre_E = 0.000002;
-thre_E = 5e-7;
+thre_E = 4e-7;
 numOfCurves = 1;
 
 % for NearEdge, these intervals are under: thre_E = 5e-7;
-BExceptionIntervals = [1.112, 1.142; 1.33, 1.374; 1.672, 1.722; 2.25, 2.32];
-specialBExceptionInterval = [3.42,3.584];
+% BExceptionIntervals = [1.112, 1.142; 1.33, 1.374; 1.672, 1.722; 2.25, 2.32];
+% specialBExceptionInterval = [3.42,3.584];
+BExceptionIntervals = [];
+specialBExceptionInterval = [];
 
 %% initialization
 AllEVs_removed = AllEVs;
@@ -53,7 +55,7 @@ B_track = [];
 %% remove ver 2
 
 for im = 1:len_m
-    if im == 2
+    if im == 2 || im== 1
         tmpIntervals = [BExceptionIntervals;specialBExceptionInterval];
     else
         tmpIntervals = BExceptionIntervals;
@@ -72,6 +74,7 @@ for im = 1:len_m
         if isInInterval
             continue;
         end
+        %
         
         iStart = find(AllBs(:,im) >= Bi-Bstep/2,1,'first');
         iEnd = find(AllBs(:,im) <= Bi+Bstep/2,1,'last');
@@ -118,7 +121,8 @@ end
 
 %% remove NaN in AllEVs_removed
 % iEV_max = 3740;     % largest index of non NaN EV, look it up in AllEVs_removed
-iEV_max = 8650;
+% iEV_max = 8650;
+iEV_max = 21486;
 AllEVs_removed_NaNRemoved = NaN(iEV_max,len_m);
 AllBs_NaNRemoved = NaN(iEV_max,len_m);
 for im = 1:len_m
@@ -138,7 +142,7 @@ end
 
 
 
-%% output to file
+%% output EVs to file
 solName = 'ListSol0920TLGExpPotLMFBAP';
 ms = -200:20:0;
 for im = 1:len_m
