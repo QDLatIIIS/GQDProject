@@ -9,16 +9,26 @@
 %% parameters
 % Bmin = 0.01;
 % Bstep = 0.01;
+
 % Bmin = 0.005;
 % Bstep = 0.005;
-Bmin = 0.002;
-Bstep = 0.002;
-Bmax = 4;
+
+% Bmin = 0.002;
+% Bstep = 0.002;
+
+Bmin = 0.5;
+Bstep = 0.01;
+
+Bmax = 10;
+
 % len_m = 11;
-len_m = lenM;
+len_m = 1;
+
 % thre_E = 0.00002;
 % thre_E = 0.000002;
-thre_E = 2e-7;
+
+% thre_E = 2e-7;
+thre_E = 2e-6;
 numOfCurves = 1;
 
 % for NearEdge, minus tau, sthese intervals are under: thre_E = 5e-7;
@@ -26,9 +36,16 @@ numOfCurves = 1;
 % specialBExceptionInterval = [3.42,3.584];
 BExceptionIntervals = [];
 specialBExceptionInterval = [];
+
 % positive tau, thre_E = 2e-7;
-BExceptionIntervals = [1.116, 1.144; 1.338, 1.382; 1.686, 1.726; 2.27, 2.32];
-specialBExceptionInterval = [3.482,3.584];
+% BExceptionIntervals = [1.116, 1.144; 1.338, 1.382; 1.686, 1.726; 2.27, 2.32];
+% specialBExceptionInterval = [3.482,3.584];
+
+
+% homo pot, thre_E = 2e-6;
+BExceptionIntervals = [0.5, 1.54; 1.64, 1.79; 1.94, 2.11; 2.31, 2.54;...
+    2.9,3.21;3.94,4.33;6.16,6.74];
+% specialBExceptionInterval = [3.482,3.584];
 
 %% initialization
 AllEVs_removed = AllEVs;
@@ -119,7 +136,7 @@ end
 %% plot to check the result of the remove
 figure
 hold all
-for i = 1:lenM
+for i = 1:len_m
 plot(AllBs(:,i),AllEVs_removed(:,i),'.')
 end
 
@@ -129,7 +146,8 @@ end
 % iEV_max = 3740;     % largest index of non NaN EV, look it up in AllEVs_removed
 % iEV_max = 8650;
 % iEV_max = 21486;  %minus tau
-iEV_max = 13315;    %positive tau
+% iEV_max = 13315;    %positive tau
+iEV_max = 37912;    %homo pot, 1010
 AllEVs_removed_NaNRemoved = NaN(iEV_max,len_m);
 AllBs_NaNRemoved = NaN(iEV_max,len_m);
 for im = 1:len_m
@@ -164,10 +182,13 @@ end
 %% output EVs in meV
 % solName = 'ListSol0920TLGExpPotLMFBAPmeV';
 % solName = 'ListSol0925TLGTheoPotMTNearEdgeAPmeV';
-solName = 'ListSol0925TLGTheoPotPTNearEdgeAPmeV';
+% solName = 'ListSol0925TLGTheoPotPTNearEdgeAPmeV';
+solName = 'ListSol1010HomoPotAPmeV';
+
 
 % ms = -200:20:0;
-ms = -1:1:1;
+% ms = -1:1:1;
+ms = 0;
 for im = 1:len_m
     ind_lastNoneNaN = find(~isnan(AllEVs_removed_NaNRemoved(:,im)),1,'last');
     tmpOut = [AllBs_NaNRemoved(1:ind_lastNoneNaN,im), ...

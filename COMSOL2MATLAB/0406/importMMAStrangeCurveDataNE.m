@@ -18,7 +18,7 @@ delimiter = '';
 if nargin<=2
     startRow = 1;
     endRow = inf;
-    if nargin<=1
+    if nargin<1
 %         filename =...
 %             'C:\Users\jwt\Documents\GitHub\GQDProject\TLGAnalyticTheory\data\MMAdata\SCDAllBFromFitTPMTNE.dat';
         filename =...
