@@ -10,7 +10,7 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    127885,       3245]
+NotebookDataLength[    127884,       3245]
 NotebookOptionsPosition[    123196,       3094]
 NotebookOutlinePosition[    123538,       3109]
 CellTagsIndexPosition[    123495,       3106]
@@ -922,7 +922,7 @@ Cell[BoxData["\<\"homo_pot_ELs.png\"\>"], "Output",
    3.685320349632469*^9, 3.6853203723214808`*^9}, 3.685320546173812*^9, 
    3.6853348655391445`*^9, 3.685959302992653*^9}]
 }, Open  ]]
-}, Closed]],
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -3126,24 +3126,24 @@ Cell[11266, 318, 737, 18, 31, "Input"],
 Cell[12006, 338, 711, 18, 31, "Input"],
 Cell[12720, 358, 700, 17, 31, "Input"],
 Cell[13423, 377, 927, 24, 31, "Input"],
-Cell[14353, 403, 640, 16, 31, "Input"],
+Cell[14353, 403, 640, 16, 45, "Input"],
 Cell[CellGroupData[{
 Cell[15018, 423, 98, 1, 67, "Subchapter"],
-Cell[15119, 426, 1277, 32, 31, "Input"],
+Cell[15119, 426, 1277, 32, 45, "Input"],
 Cell[CellGroupData[{
 Cell[16421, 462, 32, 0, 31, "Input"],
 Cell[16456, 464, 9357, 252, 55, "Output"]
 }, Open  ]],
-Cell[25828, 719, 5072, 113, 532, "Input"],
-Cell[30903, 834, 2974, 63, 272, "Input"],
+Cell[25828, 719, 5072, 113, 546, "Input"],
+Cell[30903, 834, 2974, 63, 286, "Input"],
 Cell[CellGroupData[{
 Cell[33902, 901, 349, 7, 52, "Input"],
 Cell[34254, 910, 346, 5, 31, "Output"],
 Cell[34603, 917, 344, 5, 31, "Output"]
 }, Open  ]]
-}, Closed]],
+}, Open  ]],
 Cell[CellGroupData[{
-Cell[34996, 928, 229, 5, 51, "Subchapter"],
+Cell[34996, 928, 229, 5, 67, "Subchapter"],
 Cell[35228, 935, 6374, 161, 552, "Input"]
 }, Closed]],
 Cell[CellGroupData[{
@@ -3177,7 +3177,7 @@ Cell[68883, 1769, 544, 10, 31, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[69464, 1784, 70, 1, 39, "Subsubsection"],
-Cell[69537, 1787, 6399, 143, 586, "Input"],
+Cell[69537, 1787, 6399, 143, 566, "Input"],
 Cell[CellGroupData[{
 Cell[75961, 1934, 239, 4, 31, "Input"],
 Cell[76203, 1940, 116, 1, 31, "Output"]
@@ -3227,7 +3227,7 @@ Cell[96678, 2449, 1260, 28, 212, "Input"],
 Cell[CellGroupData[{
 Cell[97963, 2481, 93, 1, 49, "Subsection"],
 Cell[98059, 2484, 3568, 99, 266, "Input"],
-Cell[101630, 2585, 3142, 72, 172, "Input"],
+Cell[101630, 2585, 3142, 72, 52, "Input"],
 Cell[104775, 2659, 2552, 56, 132, "Input"],
 Cell[CellGroupData[{
 Cell[107352, 2719, 477, 11, 31, "Input"],

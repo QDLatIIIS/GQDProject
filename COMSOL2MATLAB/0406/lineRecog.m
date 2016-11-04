@@ -5,34 +5,38 @@
 Xs = Bs;
 % Ys = 1000*EVs;
 Ys = EVs;       % do not need to convert to meV for near edge data
-% Xstep = 0.01;
-Xstep = 2e-3;
-% thres = 1;
-thres = 0.01;   % smaller threshold for near edge data
+% % Xstep = 0.01;
+% Xstart = 10;
+% % Xstep = 2e-3;
+% Xstep = 0.05;
+% Xstop = 40;
 
+Xstart = 0.5; Xstep = 1e-2; Xstop = 10;
+
+thres = 1;
+% thres = 0.01;   % smaller threshold for near edge data
+% thres = 0.5;
+% NumOfLines = 1000;   % these are from estimation
+% NumOfLines = 6000;
+NumOfLines = 100000;
 
 %% initialization
-Xregular = Xstep:Xstep:Xmax;
-% NumOfLines = 1000;   % these are from estimation
-NumOfLines = 6000;
+Xregular = Xstart:Xstep:Xstop;
 NumOfXs = length(Xregular);
 AllLines = NaN(NumOfLines,NumOfXs);
-% RightEnds = NaN(1,NumOfLines);
 TotalPoints = length(Xs);
-Xmax = max(Xs);
+Xmax = Xstop;
 
 [XsSorted, indSorted] = sort(Xs);
 YsSorted = Ys(indSorted);
 
 % add All Y points of first X point to RightEnds
 indX = 1;
-CurrentMaxNumOfLines = find(XsSorted < Xstep * 1.1, 1, 'last');
-% RightEnds(1:CurrentMaxNumOfLines) = YsSorted(1:CurrentMaxNumOfLines);
-% AllLines(1:CurrentMaxNumOfLines,indX) = RightEnds(1:CurrentMaxNumOfLines);
+CurrentMaxNumOfLines = find(XsSorted < Xstart + Xstep * 0.1, 1, 'last');
 AllLines(1:CurrentMaxNumOfLines,indX) = YsSorted(1:CurrentMaxNumOfLines);
 
 %%
-CurrentX = Xstep;
+CurrentX = Xstart;
 indMin = CurrentMaxNumOfLines + 1;
 % indX = indX + 1;
 while (CurrentX < Xmax + Xstep * 0.1)

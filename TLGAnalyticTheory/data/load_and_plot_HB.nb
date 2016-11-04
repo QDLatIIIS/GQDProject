@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     54051,       1410]
-NotebookOptionsPosition[     51771,       1328]
-NotebookOutlinePosition[     52110,       1343]
-CellTagsIndexPosition[     52067,       1340]
+NotebookDataLength[     57510,       1509]
+NotebookOptionsPosition[     54995,       1419]
+NotebookOutlinePosition[     55334,       1434]
+CellTagsIndexPosition[     55291,       1431]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1324,6 +1324,97 @@ Cell[BoxData[
          RowBox[{"0.25", ",", "23.1"}], "}"}]}], "]"}], "}"}], "]"}]}], 
    "\[IndentingNewLine]", "]"}]}]], "Input",
  CellChangeTimes->{{3.687179247242484*^9, 3.68717936807796*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["XHN\[CloseCurlyQuote]s figures", "Chapter",
+ CellChangeTimes->{{3.6872141553235292`*^9, 3.6872141596636896`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Import Data", "Section",
+ CellChangeTimes->{{3.687214162349263*^9, 3.68721416753123*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"smatheopotFBFE", "=", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+      "Import", "[", 
+       "\"\<C:\\\\Users\\\\jwt625\\\\Documents\\\\GitHub\\\\GQDProject\\\\\
+TLGAnalyticTheory\\\\data\\\\ListSol0917TLGSmaPotFBFE_m=-1000.mat\>\"", "]"}],
+       "[", 
+      RowBox[{"[", 
+       RowBox[{"2", ";;"}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+      "Import", "[", 
+       "\"\<C:\\\\Users\\\\jwt625\\\\Documents\\\\GitHub\\\\GQDProject\\\\\
+TLGAnalyticTheory\\\\data\\\\ListSol0917TLGSmaPotFBFE_m=-800.mat\>\"", "]"}], 
+      "[", 
+      RowBox[{"[", 
+       RowBox[{"2", ";;"}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+      "Import", "[", 
+       "\"\<C:\\\\Users\\\\jwt625\\\\Documents\\\\GitHub\\\\GQDProject\\\\\
+TLGAnalyticTheory\\\\data\\\\ListSol0917TLGSmaPotFBFE_m=-600.mat\>\"", "]"}], 
+      "[", 
+      RowBox[{"[", 
+       RowBox[{"2", ";;"}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+      "Import", "[", 
+       "\"\<C:\\\\Users\\\\jwt625\\\\Documents\\\\GitHub\\\\GQDProject\\\\\
+TLGAnalyticTheory\\\\data\\\\ListSol0917TLGSmaPotFBFE_m=-400.mat\>\"", "]"}], 
+      "[", 
+      RowBox[{"[", 
+       RowBox[{"2", ";;"}], "]"}], "]"}]}], "\[IndentingNewLine]", "}"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.6872141816898003`*^9, 3.687214244309821*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Show", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"ListPlot", "[", 
+    RowBox[{
+     RowBox[{"smatheopotFBFE", "[", 
+      RowBox[{"[", "1", "]"}], "]"}], ",", 
+     RowBox[{"Joined", "\[Rule]", "True"}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", "Red"}], ",", 
+     RowBox[{"ImageSize", "\[Rule]", "Large"}]}], "]"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"ListPlot", "[", 
+    RowBox[{
+     RowBox[{"smatheopotFBFE", "[", 
+      RowBox[{"[", "2", "]"}], "]"}], ",", 
+     RowBox[{"Joined", "\[Rule]", "True"}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", "Blue"}], ",", 
+     RowBox[{"ImageSize", "\[Rule]", "Large"}]}], "]"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"ListPlot", "[", 
+    RowBox[{
+     RowBox[{"smatheopotFBFE", "[", 
+      RowBox[{"[", "3", "]"}], "]"}], ",", 
+     RowBox[{"Joined", "\[Rule]", "True"}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", "Green"}], ",", 
+     RowBox[{"ImageSize", "\[Rule]", "Large"}]}], "]"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"ListPlot", "[", 
+    RowBox[{
+     RowBox[{"smatheopotFBFE", "[", 
+      RowBox[{"[", "4", "]"}], "]"}], ",", 
+     RowBox[{"Joined", "\[Rule]", "True"}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"Black", ",", "Dashed", ",", "Dotted"}], "}"}]}], ",", 
+     RowBox[{"ImageSize", "\[Rule]", "Large"}]}], "]"}]}], 
+  "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{{3.687214249469767*^9, 3.6872143516757307`*^9}}]
+}, Open  ]]
 }, Open  ]]
 },
 WindowSize->{944, 959},
@@ -1411,6 +1502,14 @@ Cell[45122, 1159, 149, 3, 45, "Input"],
 Cell[45274, 1164, 85, 1, 45, "Output"]
 }, Open  ]],
 Cell[45374, 1168, 6381, 157, 646, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[51792, 1330, 119, 1, 72, "Chapter"],
+Cell[CellGroupData[{
+Cell[51936, 1335, 95, 1, 70, "Section"],
+Cell[52034, 1338, 1440, 38, 226, "Input"],
+Cell[53477, 1378, 1490, 37, 146, "Input"]
+}, Open  ]]
 }, Open  ]]
 }
 ]
